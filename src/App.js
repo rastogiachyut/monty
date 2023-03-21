@@ -65,7 +65,7 @@ const MyDropdown = ({options, api = ''}) => {
       </div>
       {console.log('options', options)}
       {show ? <ul className='options'>
-        {options.filter(opt => opt.toLowerCase().startsWith(query.toLowerCase()))
+        {options.filter(opt => opt && opt.toLowerCase().startsWith(query.toLowerCase()))
                 .map((opt, index) => {
                   return (
                     <li
