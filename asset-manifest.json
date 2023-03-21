@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/%7Bname%7D/static/css/main.9f2b5ef7.css",
-    "main.js": "/%7Bname%7D/static/js/main.74359764.js",
-    "static/js/787.fbfe4c0f.chunk.js": "/%7Bname%7D/static/js/787.fbfe4c0f.chunk.js",
-    "index.html": "/%7Bname%7D/index.html",
-    "main.9f2b5ef7.css.map": "/%7Bname%7D/static/css/main.9f2b5ef7.css.map",
-    "main.74359764.js.map": "/%7Bname%7D/static/js/main.74359764.js.map",
-    "787.fbfe4c0f.chunk.js.map": "/%7Bname%7D/static/js/787.fbfe4c0f.chunk.js.map"
+    "main.css": "/monty/static/css/main.9f2b5ef7.css",
+    "main.js": "/monty/static/js/main.1d49df70.js",
+    "static/js/787.fbfe4c0f.chunk.js": "/monty/static/js/787.fbfe4c0f.chunk.js",
+    "index.html": "/monty/index.html",
+    "main.9f2b5ef7.css.map": "/monty/static/css/main.9f2b5ef7.css.map",
+    "main.1d49df70.js.map": "/monty/static/js/main.1d49df70.js.map",
+    "787.fbfe4c0f.chunk.js.map": "/monty/static/js/787.fbfe4c0f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f2b5ef7.css",
-    "static/js/main.74359764.js"
+    "static/js/main.1d49df70.js"
   ]
 }
