@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const cities = ['Goa', 'Delhi', 'Bangalore', 'Ghatkopar', 'Gondolin']
 
-const MyDropdown = ({options, api = ''}) => {
+const MyDropdown = ({label = 'Select', options, api = ''}) => {
   console.log('options', options)
   const [query, setQuery] = useState('')
   const [show, setShow] = useState(false)
@@ -59,12 +59,12 @@ const MyDropdown = ({options, api = ''}) => {
 
   return (
     <div onBlur={focusOut} className='dropdown'>
+      <label>{label}</label>
       <div tabIndex={1} onKeyDown={handleKeyDown} className={`input-container ${show ? "open" : ""}`}>
         <input value={query} onFocus={focusIn} onChange={e => setSelectValue(e.target.value)} />
       </div>
-      {console.log('options', options)}
       {show ? <ul className='options'>
-        {options.filter(opt => query && opt.toLowerCase().startsWith(query.toLowerCase()))
+        {options.filter(opt => !query || opt.toLowerCase().startsWith(query.toLowerCase()))
                 .map((opt, index) => {
                   return (
                     <li
