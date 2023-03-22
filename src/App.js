@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const cities = ['Goa', 'Delhi', 'Bangalore', 'Ghatkopar', 'Gondolin']
 
-const MyDropdown = ({label = 'Select', options, api = ''}) => {
+const MyDropdown = ({label = 'Select', placeholder = "Select Location", options, api = ''}) => {
   console.log('options', options)
   const [query, setQuery] = useState('')
   const [show, setShow] = useState(false)
@@ -59,35 +59,47 @@ const MyDropdown = ({label = 'Select', options, api = ''}) => {
 
   return (
     <div onBlur={focusOut} className='dropdown'>
-      <label className='selctLabel'>{label}</label>
+      <label className='selectLabel'>{label}</label>
       <div tabIndex={1} onKeyDown={handleKeyDown} className={`input-container ${show ? "open" : ""}`}>
-        <input value={query} onFocus={focusIn} onChange={e => setSelectValue(e.target.value)} />
+        <input placeholder={placeholder} value={query} onFocus={focusIn} onChange={e => setSelectValue(e.target.value)} />
+        {show ? <ul className='options'>
+          {options.filter(opt => !query || opt.toLowerCase().startsWith(query.toLowerCase()))
+            .map((opt, index) => {
+              return (
+                <li
+                  ref={index === focusedIndex ? selectList : null}
+                  style={{backgroundColor: index === focusedIndex ? "rgba(0,0,0,0.1)" : ""}}
+                  className='option'
+                  key={opt}
+                  onMouseDown={() => setSelectValue(opt)}
+                >
+                  {opt}
+                </li>
+              )
+            })
+          }
+        </ul> : null}
       </div>
-      {show ? <ul className='options'>
-        {options.filter(opt => !query || opt.toLowerCase().startsWith(query.toLowerCase()))
-                .map((opt, index) => {
-                  return (
-                    <li
-                      ref={index === focusedIndex ? selectList : null}
-                      style={{backgroundColor: index === focusedIndex ? "rgba(0,0,0,0.1)" : ""}}
-                      className='option'
-                      key={opt}
-                      onMouseDown={() => setSelectValue(opt)}
-                    >
-                      {opt}
-                    </li>)}
-                  )
-                }
-      </ul> : null}
     </div>
   )
 }
 
 function App() {
   return (
-    <div className="App">
-        <MyDropdown options={cities} />
-    </div>
+    <>
+      <div className="App">
+          <MyDropdown options={cities} />
+          <MyDropdown options={cities} />
+          <MyDropdown options={cities} />
+          <MyDropdown options={cities} />
+      </div>
+      <div>
+          <MyDropdown options={cities} />
+          <MyDropdown options={cities} />
+          <MyDropdown options={cities} />
+          <MyDropdown options={cities} />
+      </div>
+    </>
   );
 }
 

@@ -1,6 +1,9 @@
 .App {
   font-family: sans-serif;
   position: relative;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
 }
 
 .selectLabel {
@@ -13,9 +16,11 @@
   flex-direction: row;
   text-align: center;
 }
+
 .dropdown .input-container {
   position: relative;
 }
+
 .dropdown input {
   border: 1px solid #eeeeee;
   width: 100%;
@@ -23,6 +28,7 @@
   padding: 10px 20px;
   box-sizing: border-box;
 }
+
 .dropdown .input-container::after {
   content: "";
   position: absolute;
@@ -31,12 +37,18 @@
   content: "";
   display: inline-block;
   height: 0.45em;
-  top: 1em;
+  top: 0.8em;
   right: 0.5em;
   transform: rotate(-45deg);
   vertical-align: top;
   width: 0.45em;
+  transition: 0.4s ease-in-out transform;
 }
+
+.dropdown .input-container.open:after {
+  transform: rotateZ(135deg);
+}
+
 .options {
   padding: 0;
   margin: 0;
@@ -46,4 +58,8 @@
   width: 100%;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.option:hover {
+  background-color: rgba(0, 0, 0, 0.1);
 }
