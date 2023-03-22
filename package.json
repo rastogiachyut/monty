@@ -2,8 +2,8 @@
   "name": "monty",
   "version": "0.1.0",
   "private": true,
-  "homepage_alternate": "http://rastogiachyut.github.io/monty",
-  "homepage": "http://{github-username}.github.io/{repo-name}",
+  "homepage": "http://rastogiachyut.github.io/monty",
+  "homepage_alternate": "http://{github-username}.github.io/{repo-name}",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
