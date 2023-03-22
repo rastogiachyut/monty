@@ -59,7 +59,7 @@ const MyDropdown = ({label = 'Select', options, api = ''}) => {
 
   return (
     <div onBlur={focusOut} className='dropdown'>
-      <label>{label}</label>
+      <label className='selctLabel'>{label}</label>
       <div tabIndex={1} onKeyDown={handleKeyDown} className={`input-container ${show ? "open" : ""}`}>
         <input value={query} onFocus={focusIn} onChange={e => setSelectValue(e.target.value)} />
       </div>

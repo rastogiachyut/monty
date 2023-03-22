@@ -1,11 +1,17 @@
 .App {
   font-family: sans-serif;
-  text-align: center;
   position: relative;
+}
+
+.selectLabel {
+  padding: 0.5rem;
 }
 
 .dropdown {
   width: 200px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
 }
 .dropdown .input-container {
   position: relative;
