@@ -8,7 +8,6 @@ const MyDropdown = ({options, api = ''}) => {
   const [query, setQuery] = useState('')
   const [show, setShow] = useState(false)
   const [focusedIndex, setFocusedIndex] = useState(-1)
-  const selectInput = useRef();
   const selectList = useRef(null);
   
   useEffect(() => {
@@ -59,7 +58,7 @@ const MyDropdown = ({options, api = ''}) => {
   }
 
   return (
-    <div onBlur={focusOut} ref={selectInput} className='dropdown'>
+    <div onBlur={focusOut} className='dropdown'>
       <div tabIndex={1} onKeyDown={handleKeyDown} className={`input-container ${show ? "open" : ""}`}>
         <input value={query} onFocus={focusIn} onChange={e => setSelectValue(e.target.value)} />
       </div>
