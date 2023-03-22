@@ -88,16 +88,16 @@ function App() {
   return (
     <>
       <div className="App">
-          <MyDropdown options={cities} />
-          <MyDropdown options={cities} />
-          <MyDropdown options={cities} />
-          <MyDropdown options={cities} />
+        <MyDropdown label="Location:" placeholder="Location selection" options={cities} />
+        <MyDropdown label="Select a location:" placeholder="Select a Location" options={cities} />
+        <MyDropdown options={cities} />
+        <MyDropdown options={cities} />
       </div>
       <div>
-          <MyDropdown options={cities} />
-          <MyDropdown options={cities} />
-          <MyDropdown options={cities} />
-          <MyDropdown options={cities} />
+        <MyDropdown label="Location:" placeholder="Location selection" options={cities} />
+        <MyDropdown label="Select a location:" placeholder="Select a Location" options={cities} />
+        <MyDropdown options={cities} />
+        <MyDropdown options={cities} />
       </div>
     </>
   );
