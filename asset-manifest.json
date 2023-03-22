@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/monty/static/css/main.9f2b5ef7.css",
-    "main.js": "/monty/static/js/main.6752c196.js",
+    "main.js": "/monty/static/js/main.e598d253.js",
     "static/js/787.fbfe4c0f.chunk.js": "/monty/static/js/787.fbfe4c0f.chunk.js",
     "index.html": "/monty/index.html",
     "main.9f2b5ef7.css.map": "/monty/static/css/main.9f2b5ef7.css.map",
-    "main.6752c196.js.map": "/monty/static/js/main.6752c196.js.map",
+    "main.e598d253.js.map": "/monty/static/js/main.e598d253.js.map",
     "787.fbfe4c0f.chunk.js.map": "/monty/static/js/787.fbfe4c0f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f2b5ef7.css",
-    "static/js/main.6752c196.js"
+    "static/js/main.e598d253.js"
   ]
 }
